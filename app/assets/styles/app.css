@@ -1,0 +1,15 @@
+#add-todo-panel, #todo-list-panel, .menu {
+    margin: 20px;
+}
+
+#todo-list-panel .list-group-item.done {
+    text-decoration: line-through;
+    color: green;
+    background: #F2FFF2;
+}
+
+#todo-list-panel .list-group-item.done button {
+    background: green;
+    color: #ffffff;
+}
+

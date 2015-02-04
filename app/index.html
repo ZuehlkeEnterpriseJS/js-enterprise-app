@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JS Enterprise Workshop Todo App</title>
+
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/styles/app.css"/>
+
+    <script src="lib/lodash/lodash.js"></script>
+    <script src="lib/requirejs/require.js"></script>
+</head>
+<body>
+<div class="container">
+    <div id="add-todo-panel" class="input-group">
+        <input id="new-todo-description"
+               type="text"
+               class="form-control"
+               onkeyup="todo.onKeyUp(event);"
+               placeholder="Add new todo...">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" onclick="todo.onAdd();">
+                <i class="glyphicon glyphicon-plus"></i>
+            </button>
+          </span>
+    </div>
+
+    <ul id="todo-list-panel" class="list-group"></ul>
+    <div class="menu">
+        <button class="btn btn-danger" onclick="todo.onClear()">Clear</button>
+    </div>
+</div>
+
+
+<script src="app.js"></script>
+</body>
+</html>

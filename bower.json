@@ -1,0 +1,17 @@
+{
+  "name": "js-enterprise-app",
+  "version": "0.0.1",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "~3.1.0",
+    "bootstrap": "~3.3.2",
+    "requirejs": "~2.1.15"
+  }
+}
