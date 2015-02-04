@@ -7,8 +7,7 @@ define('TodoService', function () {
   var todos = [];
 
   function getAndIncrementIdCounter() {
-    idCounter++;
-    return idCounter;
+    return idCounter++;
   }
 
   function addTodo(description) {
@@ -28,6 +27,7 @@ define('TodoService', function () {
       throw new Error('No Todo item with id ' + id + ' found!');
     } else {
       matchingTodo.done = true;
+      todos.sort(sortByStatusComparator);
     }
   }
 
@@ -38,6 +38,18 @@ define('TodoService', function () {
   function clear() {
     idCounter = 0;
     todos = [];
+  }
+
+  function sortByStatusComparator(todo1, todo2) {
+    var result = 0;
+
+    if(todo1.done && !todo2.done){
+      result = 1;
+    } else if(!todo1.done && todo2.done){
+      result = -1;
+    }
+
+    return result;
   }
 
   return {

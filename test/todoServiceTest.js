@@ -52,6 +52,18 @@ describe('TodoService', function () {
 
     });
 
+    it('should sort todos by status', function () {
+      service.addTodo('todo1');
+      service.addTodo('todo2');
+      service.addTodo('todo3');
+
+      service.setDone(1);
+
+      expect(service.getTodos()[0].description).toBe('todo1');
+      expect(service.getTodos()[1].description).toBe('todo3');
+      expect(service.getTodos()[2].description).toBe('todo2');
+    });
+
   });
 
   describe('#getTasks()', function () {

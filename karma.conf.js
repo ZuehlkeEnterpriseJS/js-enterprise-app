@@ -7,7 +7,7 @@ module.exports = function (config) {
     files: [
       'app/lib/lodash/lodash.min.js',
       'app/lib/requirejs/require.js',
-      'app/*.js',
+      'app/todoService.js',
       'test/*.js'
     ],
 
