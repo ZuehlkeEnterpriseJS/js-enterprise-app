@@ -12,6 +12,8 @@
 </head>
 <body>
 <div class="container">
+    <h1>JS Enterprise ToDo</h1>
+
     <div id="add-todo-panel" class="input-group">
         <input id="new-todo-description"
                type="text"
@@ -32,6 +34,13 @@
 </div>
 
 
+<script type="text/template" id="tpl-list-item">
+    <% _.forEach(todos, function(todo) { var itemClass = todo.done?'done':'';%>
+    <li class="list-group-item <%- itemClass %>"><%- todo.description %>
+        <button class="btn btn-xs pull-right" onclick="todo.onSetDone(<%- todo.id %>)"><i
+                class="glyphicon glyphicon-ok"></i></button>
+    </li><% }); %>
+</script>
 <script src="app.js"></script>
 </body>
 </html>

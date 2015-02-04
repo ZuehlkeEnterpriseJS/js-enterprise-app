@@ -1,5 +1,5 @@
-#add-todo-panel, #todo-list-panel, .menu {
-    margin: 20px;
+#add-todo-panel, #todo-list-panel {
+    margin: 20px 0;
 }
 
 #todo-list-panel .list-group-item.done {

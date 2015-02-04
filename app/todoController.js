@@ -1,6 +1,7 @@
 'use strict';
 
 define('TodoController', ['TodoService'], function (todoService) {
+  var listItemTemplate = document.querySelector('#tpl-list-item').innerHTML.trim();
   var descriptionInputElement = document.querySelector('#new-todo-description');
   var todoListElement = document.querySelector('#todo-list-panel');
 
@@ -27,7 +28,7 @@ define('TodoController', ['TodoService'], function (todoService) {
   }
 
   function renderTodos(todos) {
-    var compiled = _.template('<% _.forEach(todos, function(todo) { var itemClass = todo.done?\'done\':\'\';%><li class="list-group-item <%- itemClass %>"><%- todo.description %><button class="btn btn-xs pull-right" onclick="todo.onSetDone(<%- todo.id %>)"><i class="glyphicon glyphicon-ok"></i></button></li><% }); %>');
+    var compiled = _.template(listItemTemplate);
     todoListElement.innerHTML = compiled({todos: todos});
   }
 
