@@ -1,0 +1,14 @@
+{
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "global-strict": 0,
+    "no-use-before-define": true
+  },
+  "globals": {
+    "requirejs": true,
+    "define": true,
+    "_": true
+  }
+}
