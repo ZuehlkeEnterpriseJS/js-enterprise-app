@@ -21,7 +21,7 @@ define('TodoService', function () {
     return todoObject;
   }
 
-  function setDone(Id) {
+  function setDone(id) {
     var matchingTodo = _.find(todos, {id: id});
     if (!matchingTodo) {
       throw new Error('No Todo item with id ' + id + ' found!');

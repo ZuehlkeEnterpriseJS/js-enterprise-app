@@ -4,7 +4,11 @@
   },
   "rules": {
     "global-strict": 0,
-    "no-use-before-define": true
+    "no-use-before-define": true,
+    "quotes": [
+      2,
+      "single"
+    ]
   },
   "globals": {
     "requirejs": true,
