@@ -1,5 +1,6 @@
-# Enterprise JavaScript Example App
+# Enterprise JavaScript Example App 
 
+[![Build Status](https://travis-ci.org/ZuehlkeEnterpriseJS/js-enterprise-app.svg?branch=release)](https://travis-ci.org/ZuehlkeEnterpriseJS/js-enterprise-app)
 
 ## Steps
 
