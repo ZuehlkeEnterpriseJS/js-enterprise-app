@@ -3,4 +3,5 @@ node_js:
   - 0.12
 
 before_script:
-  - npm -g install karma-cli
+  - npm -g install karma-cli bower
+  - bower install
